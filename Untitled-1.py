@@ -1,4 +1,4 @@
-def mostrar_menu():
+def mostrarMenu():
     print("\n Menú")
     print("1. Crear persona")
     print("2. Eliminar persona")
@@ -7,14 +7,14 @@ def mostrar_menu():
     
 
 
-def crear_persona(personas):
+def crearPersona(personas):
     nombre = input("Introduce el nombre de la persona:")
     personas.append(nombre)
     print("Persona añadida:", nombre)
     print("Lista actual de personas:", personas)
 
 
-def eliminar_persona(personas):
+def eliminarPersona(personas):
    
     
     print("Lista actual de personas:", personas)
@@ -27,14 +27,14 @@ def eliminar_persona(personas):
       
    
 
-def listar_personas(personas):
+def listarPersonas(personas):
     if not personas:
         print("La lista está vacía.")
     else:
         print("Lista actual de personas:", personas)
 
 
-def buscar_persona(personas):
+def buscarPersona(personas):
    
     nombre = input("Introduce el nombre de la persona a buscar: ")
     if nombre in personas:
@@ -46,7 +46,7 @@ def buscar_persona(personas):
 def main():
     personas = []
     while True:
-        mostrar_menu()
+        mostrarMenu()
         try:
             opcion = int(input("Elige una opción: "))
         except:
@@ -54,13 +54,13 @@ def main():
             continue
 
         if opcion == 1:
-            crear_persona(personas)
+            crearPersona(personas)
         elif opcion == 2:
-            eliminar_persona(personas)
+            eliminarPersona(personas)
         elif opcion == 3:
-            listar_personas(personas)
+            listarPersonas(personas)
         elif opcion == 4:
-            buscar_persona(personas)
+            buscarPersona(personas)
         elif opcion == 0:
             print("Saliendo del programa...")
             break
